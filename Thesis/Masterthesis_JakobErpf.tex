@@ -1,4 +1,4 @@
-\documentclass[a4paper,headsepline,footsepline,fontsize=11pt,BCOR=12mm,DIV=12]{report}
+\documentclass[a4paper,headsepline,footsepline]{report}
 
 %\documentclass[headsepline,footsepline,footinclude=false,fontsize=11pt,
 %paper=a4,listof=totoc,bibliography=totoc,BCOR=12mm,DIV=12]{scrbook} % two-sided
@@ -24,6 +24,9 @@
 \usepackage{geometry}
 \usepackage{listings}
 \usepackage{booktabs}
+
+\RequirePackage[backend=biber,style=apa,citestyle=authoryear]{biblatex}
+\addbibresource{../Literatur/library}
 
 \usepackage[toc,page]{appendix}
 \usepackage[toc,acronym]{glossaries}
@@ -2792,8 +2795,7 @@ The improved DBSCAN algorithm based on cell-like P systems with promoters and in
 Expand DBSCAN to three dimension from space and time (2D) to include cell speed into clustering algorithm.
 
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{apalike}
-\bibliography{../Literatur/library}{}
+\printbibliography
 
 \addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures
